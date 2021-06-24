@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block babies %}
+<h2 style='color:wheat; font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; text-shadow: #000 0px 0px 5px;'>{{snack.name}}</h2>
+<p style='color:wheat; font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; text-shadow: #000 0px 0px 5px;'>Description: {{snack.description}}</p>
+<p style='color:wheat; font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; text-shadow: #000 0px 0px 5px;'>Purchaser: {{snack.purchaser}}</p>
+<a href='/'><p style='color:wheat; font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; text-shadow: #000 0px 0px 5px;'></p>Go to Homepage</a>
+<a href='{% url "snack_update" snack.pk %}'><p style='color:wheat; font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; text-shadow: #000 0px 0px 5px;'></p>Update This Item</a>
+<a href='{% url "snack_delete" snack.pk %}'><p style='color:wheat; font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; text-shadow: #000 0px 0px 5px;'></p>Delete This Item</a>
+{% endblock babies %}
